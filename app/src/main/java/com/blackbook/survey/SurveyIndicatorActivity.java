@@ -2,8 +2,8 @@ package com.blackbook.survey;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
-import android.support.v4.content.ContextCompat;
+import androidx.core.app.NavUtils;
+import androidx.core.content.ContextCompat;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;

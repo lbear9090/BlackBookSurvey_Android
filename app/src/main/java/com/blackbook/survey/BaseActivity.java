@@ -2,7 +2,7 @@ package com.blackbook.survey;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.blackbook.survey.Constant.AppGlobal;
 import com.blackbook.survey.Utils.Utils;

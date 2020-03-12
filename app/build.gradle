@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 29
+    buildToolsVersion '29.0.3'
 
     defaultConfig {
         applicationId "com.blackbook.survey"
         minSdkVersion 21
-        targetSdkVersion 27
+        targetSdkVersion 29
         versionCode 6
         versionName "2.4"
 
@@ -36,22 +36,22 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:27.0.2'
-    compile 'com.android.support:recyclerview-v7:27.0.1'
-    compile 'org.adw.library:discrete-seekbar:1.0.1'
-    compile 'com.twitter.sdk.android:twitter:3.1.1'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.2.4'
-    compile 'com.fasterxml.jackson.core:jackson-core:2.2.4'
-    compile 'com.fasterxml.jackson.core:jackson-annotations:2.2.4'
-    compile 'com.google.code.gson:gson:2.7'
-    compile 'com.github.bmelnychuk:atv:1.2.0'
-    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
-    compile 'com.google.android.gms:play-services-auth:11.0.4'
-    compile 'com.twitter.sdk.android:twitter-core:3.1.1'
-    compile 'com.twitter.sdk.android:tweet-ui:3.1.1'
-    compile 'com.twitter.sdk.android:tweet-composer:3.1.1'
-    compile 'com.twitter.sdk.android:twitter-mopub:3.1.1'
-    apply plugin: 'com.google.gms.google-services'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'org.adw.library:discrete-seekbar:1.0.1'
+    implementation 'com.twitter.sdk.android:twitter:3.1.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.2.4'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.2.4'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.2.4'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.github.bmelnychuk:atv:1.2.0'
+    implementation 'com.facebook.android:facebook-android-sdk:4.42.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.twitter.sdk.android:twitter-core:3.1.1'
+    implementation 'com.twitter.sdk.android:tweet-ui:3.1.1'
+    implementation 'com.twitter.sdk.android:tweet-composer:3.1.1'
+    implementation 'com.twitter.sdk.android:twitter-mopub:3.1.1'
 }
+apply plugin: 'com.google.gms.google-services'

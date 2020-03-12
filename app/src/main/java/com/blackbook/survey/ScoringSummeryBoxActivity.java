@@ -1,7 +1,7 @@
 package com.blackbook.survey;
 
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
+import androidx.core.app.NavUtils;
 import android.view.MenuItem;
 import android.widget.TextView;
 
