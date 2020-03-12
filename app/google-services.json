@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "572960857018",
+    "project_id": "black-book-research"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572960857018:android:f8a31b897877aabe",
+        "android_client_info": {
+          "package_name": "com.blackbook.survey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572960857018-a25t4ushplpqijeppbqhe16jq3ege9qf.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "572960857018-r3t32gtjvk2nuh3jgje62mlj4tehq7bl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.blackbook.survey",
+            "certificate_hash": "b0cb775403492ad7c5b05f700826e9876f223c64"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2us1SwOCetU6N_1cP_GRKE_mWDIa8rnQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

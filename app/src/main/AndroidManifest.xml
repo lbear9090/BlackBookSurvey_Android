@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.blackbook.survey">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-sdk tools:overrideLibrary="com.facebook" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="true"
+        android:name="com.blackbook.survey.Utils.MyCustomApplication" >
+
+        <activity
+            android:name="com.blackbook.survey.SplashscreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.blackbook.survey.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.blackbook.survey.PresurveyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.blackbook.survey.PresurveyList.ServicesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blackbook.survey.PresurveyActivity" />
+        </activity>
+
+        <activity
+            android:name="com.blackbook.survey.PresurveyList.VendorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blackbook.survey.PresurveyActivity" />
+        </activity>
+
+        <activity
+            android:name="com.blackbook.survey.PresurveyList.RateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blackbook.survey.PresurveyActivity" />
+        </activity>
+
+        <activity
+            android:name="com.blackbook.survey.PresurveyList.OrganizationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blackbook.survey.PresurveyActivity" />
+        </activity>
+
+        <activity
+            android:name="com.blackbook.survey.PresurveyList.RoleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blackbook.survey.PresurveyActivity" />
+        </activity>
+
+        <activity
+            android:name="com.blackbook.survey.RegistrationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+
+        <activity
+            android:name="com.blackbook.survey.CountrycodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.blackbook.survey.SurveyIndicatorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"  >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blackbook.survey.PresurveyActivity" />
+        </activity>
+
+        <activity
+            android:name="com.blackbook.survey.ScoringSummeryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"  >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blackbook.survey.SurveyIndicatorActivity" />
+        </activity>
+
+        <activity
+            android:name="com.blackbook.survey.LoyaltyQuestionsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.blackbook.survey.GetdataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.blackbook.survey.ScoringSummeryBoxActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blackbook.survey.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.blackbook.survey.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blackbook.survey.PresurveyActivity" />
+        </activity>
+
+        <activity
+            android:name="com.blackbook.survey.SubmitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.blackbook.survey.CompleteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.blackbook.survey.TermsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:parentActivityName="com.blackbook.survey.MainActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blackbook.survey.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.blackbook.survey.PrivacyPolicyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:parentActivityName="com.blackbook.survey.MainActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blackbook.survey.MainActivity" />
+        </activity>
+
+        <!--<activity-->
+        <!--android:name="com.facebook.FacebookActivity"-->
+        <!--android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
+        <!--android:label="@string/app_name"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+                   android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+                  android:configChanges=
+                      "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                  android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1495923150738490"
+            android:exported="true" />
+
+    </application>
+</manifest>

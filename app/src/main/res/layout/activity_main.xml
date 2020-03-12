@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin" >
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/blackbookimg"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txt_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/app_textsize_regular"
+        android:padding="5dp"
+        android:textColor="@color/color_black"
+        android:text="@string/str_welcome"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        android:id="@+id/img_login_with_fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fbloginimg"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/img_logo"
+        android:layout_alignStart="@+id/btn_continue_asguest"/>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/img_login_with_g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_login_with_fb"
+        android:layout_alignStart="@+id/btn_continue_asguest"
+        android:layout_marginTop="10dp"
+        android:layout_alignEnd="@+id/btn_continue_asguest"/>
+
+    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id="@+id/img_login_with_tw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_login_with_g"
+        android:layout_alignStart="@+id/btn_continue_asguest"
+        android:layout_marginTop="10dp"
+        android:layout_alignEnd="@+id/btn_continue_asguest" />
+
+    <Button
+        android:id="@+id/btn_continue_asguest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/str_continue_asguest"
+        android:textSize="@dimen/app_textsize_regular"
+        android:textColor="@color/color_black"
+        android:background="@drawable/guestbutton"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/img_login_with_tw"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/btnPrivacyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy_policy"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnTermsService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_service"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>

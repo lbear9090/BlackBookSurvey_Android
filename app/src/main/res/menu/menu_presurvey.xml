@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/key_preformance"
+          android:title="@string/str_key_performance"/>
+    <item android:id="@+id/scoring"
+          android:title="@string/str_scroing_keys" />
+    <item android:id="@+id/vendors"
+          android:title="@string/str_vendors" />
+    <item android:id="@+id/editprofile"
+          android:title="@string/str_editprofile" />
+    <item android:id="@+id/support"
+          android:title="@string/str_support" />
+    <item android:id="@+id/logout"
+          android:title="@string/str_logout" />
+</menu>

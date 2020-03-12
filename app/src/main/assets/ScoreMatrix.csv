@@ -1,0 +1,5 @@
+scoreMatrixId;matrixTitle;matrixDescription;startRange;endRange;deleted
+1;Deal Breaking Dissatisfaction;Does not meet expectations. Cannot recommend vendor;0;5.79;0
+2;Neutral;Meets.Does not meet expectation consistently. Would not likely recommend vendor;5.8;7.32;0
+3;Satisfactory Performance;Meets Expectations. Recommends vendor;7.33;8.7;0
+4;Overwhelming Satisfaction;Exceeds Expectation. Highly recommended vendor;8.71;10;0

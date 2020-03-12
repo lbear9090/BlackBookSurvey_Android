@@ -1,0 +1,36 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="pad_1dp">1dp</dimen>
+    <dimen name="pad_3dp">3dp</dimen>
+    <dimen name="pad_5dp">5dp</dimen>
+    <dimen name="pad_7dp">7dp</dimen>
+    <dimen name="pad_10dp">10dp</dimen>
+    <dimen name="pad_12dp">12dp</dimen>
+    <dimen name="pad_15dp">15dp</dimen>
+    <dimen name="pad_20dp">20dp</dimen>
+    <dimen name="pad_25dp">25dp</dimen>
+    <dimen name="pad_30dp">30dp</dimen>
+    <dimen name="pad_40dp">40dp</dimen>
+    <dimen name="pad_45dp">45dp</dimen>
+    <dimen name="pad_50dp">50dp</dimen>
+    <dimen name="pad_60dp">60dp</dimen>
+    <dimen name="pad_70dp">70dp</dimen>
+    <dimen name="pad_75dp">75dp</dimen>
+    <dimen name="pad_80dp">80dp</dimen>
+    <dimen name="pad_90dp">90dp</dimen>
+    <dimen name="pad_100dp">100dp</dimen>
+    <dimen name="pad_120dp">120dp</dimen>
+    <dimen name="pad_150dp">150dp</dimen>
+    <dimen name="pad_175dp">175dp</dimen>
+    <dimen name="pad_200dp">200dp</dimen>
+    <dimen name="pad_250dp">250dp</dimen>
+    <dimen name="pad_300dp">300dp</dimen>
+    <dimen name="pad_400dp">400dp</dimen>
+    <dimen name="pad_450dp">450dp</dimen>
+    <dimen name="pad_500dp">500dp</dimen>
+    <dimen name="pad_550dp">550dp</dimen>
+    <dimen name="pad_600dp">600dp</dimen>
+</resources>

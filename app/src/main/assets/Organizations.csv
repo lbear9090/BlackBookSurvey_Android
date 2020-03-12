@@ -1,0 +1,77 @@
+organizationTypeId;organizationTypeName;parentId;level;isOptional;deleted
+1;Inpatient Hospital;0;0;0;0
+2;Hospital Chain/Corporation;0;0;0;0
+3;Physician Practice;0;0;0;0
+4;Payer;0;0;0;0
+5;Consultant Firm;0;0;0;0
+6;Ancillary Provider;0;0;0;0
+7;Pharmaceuticals;0;0;0;0
+8;Life Sciences;0;0;0;0
+9;Medical Devices;0;0;0;0
+10;Other;0;0;0;0
+11;100 Beds or Less;1;1;0;0
+12;101-250 Beds;1;1;0;0
+13;250+ Beds;1;1;0;0
+14;Solo (1) Physician;3;1;0;0
+15;2-5 Physician Group;3;1;0;0
+16;6-10 Physician Group;3;1;0;0
+17;11-25 Physician Group;3;1;0;0
+18;26 - 99 Physician Group;3;1;0;0
+19;100+ Group/Clinic;3;1;0;0
+20;Administrative Services Organization;4;1;0;0
+21;Champus/VA/Military/Tricare;4;1;0;0
+22;HMO/PPO/POS;4;1;0;0
+23;HRSA/Community Health;4;1;0;0
+24;Private Health Insurer (Other);4;1;0;0
+25;Representing Consultant Firm;5;1;0;0
+26;Representing Client User;5;1;0;0
+27;Ambulatory Surgery Center;6;1;0;0
+28;Nursing Home/SNF;6;1;0;0
+29;Home Health;6;1;0;0
+30;Physical Rehab Facility;6;1;0;0
+31;Laboratory;6;1;0;0
+32;Diagnostic Imaging Center;6;1;0;0
+33;Chiropractor;6;1;0;0
+34;Dental;6;1;0;0
+35;Cancer Center;6;1;0;0
+36;Hospice;6;1;0;0
+37;Durable Medical Equipment;6;1;0;0
+38;Manufacturer;7;1;0;0
+39;Support Firm;7;1;0;0
+40;Manufacturer;8;1;0;0
+41;Support Firm;8;1;0;0
+42;Manufacturer;9;1;0;0
+43;Support Firm;9;1;0;0
+44;Fill In;10;1;0;0
+45;Not for Profit;11;2;1;0
+46;For Profit;11;2;1;0
+47;VA/Government;11;2;1;0
+48;Not for Profit;12;2;1;0
+49;For Profit;12;2;1;0
+50;VA/Government;12;2;1;0
+51;Not for Profit;13;2;1;0
+52;For Profit;13;2;1;0
+53;VA/Government;13;2;1;0
+54;Not for Profit;2;2;1;0
+55;For Profit;2;2;1;0
+56;Private Health Insurer (Other);14;2;1;0
+57;Group;14;2;1;0
+58;Clinic;14;2;1;0
+59;Medical School;14;2;1;0
+60;IPA;14;2;1;0
+61;Hospital IDN;14;2;1;0
+62;Commercial;22;2;1;0
+63;Government;22;2;1;0
+64;Provider Sponsored;22;2;1;0
+65;Other;22;2;1;0
+66;Government;23;2;1;0
+67;Other;23;2;1;0
+68;2-5 Physician Group;24;2;1;0
+69;Provider Sponsored;24;2;1;0
+70;Other;24;2;1;0
+71;Hospital;26;2;1;0
+72;Medical Group;26;2;1;0
+73;Government Unit;26;2;1;0
+74;Ancillary;26;2;1;0
+75;Payer;26;2;1;0
+76;Other;26;2;1;0

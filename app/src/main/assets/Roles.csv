@@ -1,0 +1,37 @@
+roleId;roleName;parentId;level;isOptional;deleted
+1;Executive;0;0;0;0
+2;Senior Officer/VP;0;0;0;0
+3;Supervisor/Manager;0;0;0;0
+4;Front Line User;0;0;0;0
+5;Physician;0;0;0;0
+6;Clinician;0;0;0;0
+7;Consultant;0;0;0;0
+8;Other;0;0;0;0
+9;Chief Executive Officer, Executive Director, Administrator;1;1;0;0
+10;Chief Financial Officer, Controller;1;1;0;0
+11;Chief Information Officer;1;1;0;0
+12;Chief Information Security Officer;1;1;0;0
+13;Chief Medical Information Officer;1;1;0;0
+14;Chief Nursing Officer;1;1;0;0
+15;Chief Medical Officer;1;1;0;0
+16;Chief Operating Officer;1;1;0;0
+17;Other Executive;1;1;0;0
+18;IT;2;1;0;0
+19;Material Management;2;1;0;0
+20;Nursing;2;1;0;0
+21;Ancillary Department;2;1;0;0
+22;Finance;2;1;0;0
+23;Other Department;2;1;0;0
+24;IT;3;1;0;0
+25;Material Management;3;1;0;0
+26;Nursing;3;1;0;0
+27;Ancillary Department;3;1;0;0
+28;Finance;3;1;0;0
+29;Other;3;1;0;0
+30;IT;4;1;0;0
+31;Material Management;4;1;0;0
+32;Nursing/Clinical;4;1;0;0
+33;Ancillary Department;4;1;0;0
+34;Finance/Billing;4;1;0;0
+35;Clerical;4;1;0;0
+36;Other;4;1;0;0

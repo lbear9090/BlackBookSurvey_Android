@@ -1,0 +1,127 @@
+<resources xmlns:android="http://schemas.android.com/tools">
+    <string name="app_name">Black Book&#8482; Research</string>
+    <string name="str_appname">Black Book&#8482; Research</string>
+    <string name="str_copyright">Copyright &#169; 2018 All rights reserved.</string>
+    <string name="str_welcome">Welcome, review your healthcare industry technology &amp; services vendor</string>
+    <string name="str_key_performance">Key Performance Indicators</string>
+    <string name="str_scroing_keys">Scoring Keys</string>
+    <string name="str_vendors">Vendors</string>
+    <string name="str_editprofile">Edit Profile</string>
+    <string name="str_support">Support</string>
+    <string name="str_logout">Logout</string>
+    <string name="str_service">What service or technology line are you rating?</string>
+    <string name="str_select_service">Select Service</string>
+    <string name="str_vendor">Who is your vendor?</string>
+    <string name="str_select_vendor">Select Vendor</string>
+    <string name="str_organization">I represent an organization</string>
+    <string name="str_select_organization">Select Organization</string>
+    <string name="str_role">What is your role?</string>
+    <string name="str_rating">What are you rating?</string>
+    <string name="str_select_role">Select Role</string>
+    <string name="str_select_rating">Select Rating</string>
+    <string name="str_start_survey">START SURVEY</string>
+    <string name="str_start_another">TAKE ANOTHER SURVEY </string>
+    <string name="str_services">Services</string>
+    <string name="organization">Organization</string>
+    <string name="roles">Roles</string>
+    <string name="str_registration">Registration</string>
+    <string name="str_profile">Profile</string>
+    <string name="str_skip">Skip</string>
+    <string name="str_name">Name</string>
+    <string name="str_email">Email</string>
+    <string name="str_phone">Phone</string>
+    <string name="str_plus_one">+1</string>
+    <string name="str_agree_result">I would like to receive notice when I can download the final results.</string>
+    <string name="str_agree_blackbook">I would like to be informed of future incentives &amp; gratis research from Black Book.</string>
+    <string name="str_agree_participation">I would like more information from the Black Book on future survey participation.</string>
+    <string name="str_submit">SUBMIT</string>
+    <string name="str_save_profile">SAVE PROFILE</string>
+    <string name="str_varify">You may enter other vendor reviews separately after you submit this survey. Black Book mobile app survey responses are verified through</string>
+    <string name="str_surveyindicator">Survey Key Performance indicator</string>
+    <string name="str_scoringsummery">Your Scoring Summery</string>
+    <string name="str_loyaltyquestions">Loyalty Questions</string>
+    <string name="str_getdata">Fetch Data</string>
+    <string name="str_submitdata">Submiting Data</string>
+    <string name="str_previous">Previous</string>
+    <string name="str_next">Next</string>
+    <string name="str_finish">Finish</string>
+    <string name="str_exit">Exit</string>
+
+    <string name="str_579">0.00 &#8211; 5.79</string>
+    <string name="str_732">5.80 &#8211; 7.32</string>
+    <string name="str_870">7.33 &#8211; 8.70</string>
+    <string name="str_1000">8.71 &#8211; 10.00</string>
+
+    <string name="str_deal">Deal Breaking \nDissatisfaction</string>
+    <string name="str_neutral">Neutral</string>
+    <string name="str_satisfactory">Satisfactory \nPerformance</string>
+    <string name="str_overwhelming">Overwhelming \nSatisfaction</string>
+
+    <string name="str_deal_summery">Does not meet expectations \nCannot recommend vendor</string>
+    <string name="str_neutral_summery">Meets Does not meet \nexpectation consistently \nWould not likely recommend \nvendor</string>
+    <string name="str_satisfactory_summery">Meets Expectations \nRecommends vendor</string>
+    <string name="str_overwhelming_summery">Exceeds Expectation \nHighly recommended vendor</string>
+
+    <string name="str_enter_name">Please enter your name</string>
+    <string name="str_enter_email">Please enter your email</string>
+    <string name="str_enter_validemail">Please enter a valid email</string>
+    <string name="str_check_notice">Please check you\'d like to receive notices.</string>
+    <string name="str_check_incentives">Please check you\'d like to be eligible for incentives.</string>
+    <string name="str_check_participation">Please check you\'d Like more information.</string>
+    <string name="str_enter_phone">Please enter a phone number</string>
+
+    <string name="select_service">Please select Service</string>
+    <string name="select_vendor">Please select Vendor</string>
+    <string name="select_organization">Please select Organization</string>
+    <string name="select_role">Please select Role</string>
+    <string name="select_rating">Please select Rating</string>
+
+    <string name="facebook_app_id">125405301461268</string>
+    <string name="fb_login_protocol_scheme">fb125405301461268</string>
+    <string name="str_no_internet">Internet connection is required!</string>
+
+    <string name="Please_wait">Please wait&#8230;</string>
+    <string name="Saving_profile">Saving Profile</string>
+
+    <string name="str_continue_asguest">CONTINUE AS GUEST</string>
+
+    <string name="str_continue">Continue</string>
+
+
+
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="privacy_date">LAST MODIFIED NOVEMBER 7, 2017</string>
+    <string name="privacy_description">Black Book Market Research is committed to protecting the privacy of your information collected with you use our website or any of our survey and polling applications. If you do not accept the terms set out in this Privacy Policy, you should cease all usage of our services. We reserve the right to modify this policy at our sole discretion at any time. You are advised to check back at this page for any updates.\n\n
+
+                                        While you are using our surveying and polling services, we may collect certain information about you including name, email address, phone number, place of employment, geographic location, number of surveys taken, and/or position title. We use this information for verifying account information, identifying frauds, sending survey announcements and results, and revealing trends. In addition, we may collect certain statistical information and share the outcomes with subscribers and report purchasers.\n\n
+
+                                        <b>This statistical information is not linked to any personally identifiable information.</b>\n\n
+
+                                        Our website or mobile applications may contain links to third party websites or mobile applications. Please be aware that these other sites and applications have their own privacy policies and Black Book is not responsible for their privacy practices.\n\n
+
+                                        We may set and access cookies on your device, which are small text files to help us recognize you the next time you visit us. We may also use these cookies to customize our sites for user’s preferences and statuses.\n\n
+
+                                        Black Book commits to protect your privacy and security from any unauthorized disclosure and uses a variety of secure techniques for the purpose. However, you should be aware that cyberthreats are changing rapidly and we cannot guarantee that our safeguards are failsafe, You hereby acknowledged that Black Book is not responsible for the use of your personal information disclosed in any unauthorized manner.\n\n
+
+                                        <b>Survey Serving Technology</b>\n\n
+
+                                        This app uses various online survey platforms through which we conduct surveys including Pollfish and Survey Monkey for ad hoc polling.  By downloading this application, you give your consent fir the processing of your submitted data by third party ballot verifications as well. Black Book utilizes various.\n\n
+    </string>
+
+    <string name="terms_service">Terms Of Use</string>
+    <string name="terms_date">LAST MODIFIED NOVEMBER 7, 2017</string>
+    <string name="terms_description">Any use of this application, our website and/or other services that Black Book provides assumes that you agree to these Terms of Use. These terms also apply to all IOS and Android mobile applications that Black Book provides. If you do not accept these terms, you should cease all usage of our services. We reserve the right to change these Terms of Use in our sole direction at any time. You are advised to check back at this page for any updates.\n\n
+
+A user is allowed to have only one account. An email address may only be used by one user. You agree to provide accurate information including email address, phone number, employer or company/organization where the software or services are implemented, position title, and location. Failure to do so may result in the termination of your account.\n\n
+
+You may not use Virtual Private Networks (VPNs), proxies or any other methods to manipulate your IP addresses, locations, device types, or other profile information fraudulently.\n\n
+
+Your account will be terminated at any time without notice if it is believed or has been determined that you have violated these Terms of Use or suspicious activity is detected. We also reserve the right to contact you via phone or email to confirm identities.\n\n
+
+You hereby acknowledge that Black Book and its founders and staff are not responsible or liable for any damages, losses or problems caused by or related to our website or mobile applications.
+    </string>
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">1L2Wk2cZ16BVPBqozdSmVTqT3</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">eI87eu5inH7cgUATdnVXMPiUSjw3PbCR0jsjBLb5TnZMIEGXR9</string>
+    <string name="OrgID">OrgID</string>
+</resources>
