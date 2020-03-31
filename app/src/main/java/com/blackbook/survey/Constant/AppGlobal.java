@@ -97,7 +97,11 @@ public class AppGlobal {
      * @param context
      */
     public static void hideProgressDialog(Context context) {
-        progressDialog.dismiss();
+        if(progressDialog != null && progressDialog.isShowing()){
+            progressDialog.dismiss();
+            progressDialog = null;
+        }
+
 
     }
 

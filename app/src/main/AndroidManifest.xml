@@ -17,6 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:fullBackupContent="true"
+        tools:ignore="LockedOrientationActivity"
         android:name="com.blackbook.survey.Utils.MyCustomApplication" >
 
         <activity

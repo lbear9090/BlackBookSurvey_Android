@@ -1,4 +1,4 @@
-<resources xmlns:android="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Black Book&#8482; Research</string>
     <string name="str_appname">Black Book&#8482; Research</string>
     <string name="str_copyright">Copyright &#169; 2018 All rights reserved.</string>
@@ -76,8 +76,8 @@
     <string name="select_role">Please select Role</string>
     <string name="select_rating">Please select Rating</string>
 
-    <string name="facebook_app_id">125405301461268</string>
-    <string name="fb_login_protocol_scheme">fb125405301461268</string>
+    <string name="facebook_app_id">225687495455053</string>
+    <string name="fb_login_protocol_scheme">fb225687495455053</string>
     <string name="str_no_internet">Internet connection is required!</string>
 
     <string name="Please_wait">Please wait&#8230;</string>
