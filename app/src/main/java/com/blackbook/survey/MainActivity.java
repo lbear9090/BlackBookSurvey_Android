@@ -106,13 +106,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
         SignInButton signInButton = (SignInButton) findViewById(R.id.img_login_with_g);
         signInButton.setOnClickListener(this);
 
-        TwitterConfig config = new TwitterConfig.Builder(this)
-                .logger(new DefaultLogger(Log.DEBUG))
-                .twitterAuthConfig(new TwitterAuthConfig("CONSUMER_KEY", "CONSUMER_SECRET"))
-                .debug(true)
-                .build();
-        Twitter.initialize(config);
+//        TwitterConfig config = new TwitterConfig.Builder(this)
+//                .logger(new DefaultLogger(Log.DEBUG))
+//                .twitterAuthConfig(new TwitterAuthConfig("CONSUMER_KEY", "CONSUMER_SECRET"))
+//                .debug(true)
+//                .build();
+//        Twitter.initialize(config);
 
+        Twitter.initialize(this);
         twitterLoginButton = (TwitterLoginButton) findViewById(R.id.img_login_with_tw);
         twitterLoginButton.setCallback(new Callback<TwitterSession>() {
             @Override

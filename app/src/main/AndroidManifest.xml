@@ -18,10 +18,10 @@
         android:theme="@style/AppTheme"
         android:fullBackupContent="true"
         tools:ignore="LockedOrientationActivity"
-        android:name="com.blackbook.survey.Utils.MyCustomApplication" >
+        android:name=".Utils.MyCustomApplication" >
 
         <activity
-            android:name="com.blackbook.survey.SplashscreenActivity"
+            android:name=".SplashscreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
@@ -31,156 +31,156 @@
         </activity>
 
         <activity
-            android:name="com.blackbook.survey.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="com.blackbook.survey.PresurveyActivity"
+            android:name=".PresurveyActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="com.blackbook.survey.PresurveyList.ServicesActivity"
+            android:name=".PresurveyList.ServicesActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.blackbook.survey.PresurveyActivity" />
+                android:value=".PresurveyActivity" />
         </activity>
 
         <activity
-            android:name="com.blackbook.survey.PresurveyList.VendorActivity"
+            android:name=".PresurveyList.VendorActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.blackbook.survey.PresurveyActivity" />
+                android:value=".PresurveyActivity" />
         </activity>
 
         <activity
-            android:name="com.blackbook.survey.PresurveyList.RateActivity"
+            android:name=".PresurveyList.RateActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.blackbook.survey.PresurveyActivity" />
+                android:value=".PresurveyActivity" />
         </activity>
 
         <activity
-            android:name="com.blackbook.survey.PresurveyList.OrganizationActivity"
+            android:name=".PresurveyList.OrganizationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.blackbook.survey.PresurveyActivity" />
+                android:value=".PresurveyActivity" />
         </activity>
 
         <activity
-            android:name="com.blackbook.survey.PresurveyList.RoleActivity"
+            android:name=".PresurveyList.RoleActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.blackbook.survey.PresurveyActivity" />
+                android:value=".PresurveyActivity" />
         </activity>
 
         <activity
-            android:name="com.blackbook.survey.RegistrationActivity"
+            android:name=".RegistrationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
         </activity>
 
         <activity
-            android:name="com.blackbook.survey.CountrycodeActivity"
+            android:name=".CountrycodeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="com.blackbook.survey.SurveyIndicatorActivity"
+            android:name=".SurveyIndicatorActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"  >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.blackbook.survey.PresurveyActivity" />
+                android:value=".PresurveyActivity" />
         </activity>
 
         <activity
-            android:name="com.blackbook.survey.ScoringSummeryActivity"
+            android:name=".ScoringSummeryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"  >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.blackbook.survey.SurveyIndicatorActivity" />
+                android:value=".SurveyIndicatorActivity" />
         </activity>
 
         <activity
-            android:name="com.blackbook.survey.LoyaltyQuestionsActivity"
+            android:name=".LoyaltyQuestionsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="com.blackbook.survey.GetdataActivity"
+            android:name=".GetdataActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="com.blackbook.survey.ScoringSummeryBoxActivity"
+            android:name=".ScoringSummeryBoxActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.blackbook.survey.MainActivity" />
+                android:value=".MainActivity" />
         </activity>
 
         <activity
-            android:name="com.blackbook.survey.EditProfileActivity"
+            android:name=".EditProfileActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.blackbook.survey.PresurveyActivity" />
+                android:value=".PresurveyActivity" />
         </activity>
 
         <activity
-            android:name="com.blackbook.survey.SubmitActivity"
+            android:name=".SubmitActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="com.blackbook.survey.CompleteActivity"
+            android:name=".CompleteActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="com.blackbook.survey.TermsActivity"
+            android:name=".TermsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
-            android:parentActivityName="com.blackbook.survey.MainActivity" >
+            android:parentActivityName=".MainActivity" >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.blackbook.survey.MainActivity" />
+                android:value=".MainActivity" />
         </activity>
 
         <activity
-            android:name="com.blackbook.survey.PrivacyPolicyActivity"
+            android:name=".PrivacyPolicyActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
-            android:parentActivityName="com.blackbook.survey.MainActivity" >
+            android:parentActivityName=".MainActivity" >
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.blackbook.survey.MainActivity" />
+                android:value=".MainActivity" />
         </activity>
 
         <!--<activity-->

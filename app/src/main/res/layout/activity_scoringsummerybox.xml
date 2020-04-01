@@ -8,15 +8,13 @@
     <RelativeLayout
         android:id="@+id/rela_main"
         android:layout_width="match_parent"
-        android:layout_height="330dp"
-        android:layout_below="@+id/rela_top">
+        android:layout_height="330dp">
+
 
         <RelativeLayout
             android:id="@+id/rela_scoringkeys"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/rela_role"
-            android:layout_above="@+id/btn_startsurvey"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="3dp"
             android:layout_marginLeft="5dp"

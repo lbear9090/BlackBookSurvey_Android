@@ -8,8 +8,7 @@
     <RelativeLayout
         android:id="@+id/rela_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/rela_top">
+        android:layout_height="match_parent">
 
         <ExpandableListView
             android:id="@+id/lvExp"

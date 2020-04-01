@@ -9,7 +9,6 @@
         android:id="@+id/rela_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/rela_top"
         android:background="@color/color_white">
 
        <RelativeLayout
@@ -612,7 +611,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/color_lightblack"
-        android:layout_below="@+id/rela_top"
         android:visibility="gone">
 
         <RelativeLayout
