@@ -271,7 +271,7 @@ public class RegistrationActivity extends BaseActivity implements View.OnClickLi
         }
 
 
-        if(!chkresult.isChecked())
+        /*if(!chkresult.isChecked())
         {
             AppGlobal.showToast(this, getResources().getString(R.string.str_check_notice));
 
@@ -291,7 +291,7 @@ public class RegistrationActivity extends BaseActivity implements View.OnClickLi
             AppGlobal.showToast(this, getResources().getString(R.string.str_check_participation));
 
             return false;
-        }
+        }*/
 
         return true;
     }
