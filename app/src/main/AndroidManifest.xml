@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:fullBackupContent="true"
-        tools:ignore="LockedOrientationActivity"
+        android:usesCleartextTraffic="true"
+        tools:ignore="LockedOrientationActivity,UnusedAttribute"
         android:name=".Utils.MyCustomApplication" >
 
         <activity
