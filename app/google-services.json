@@ -1,45 +1,53 @@
 {
   "project_info": {
-    "project_number": "572960857018",
-    "project_id": "black-book-research"
+    "project_number": "30757229116",
+    "firebase_url": "https://black-book-survey-app.firebaseio.com",
+    "project_id": "black-book-survey-app",
+    "storage_bucket": "black-book-survey-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:572960857018:android:f8a31b897877aabe",
+        "mobilesdk_app_id": "1:30757229116:android:601cadedf857ba677c6939",
         "android_client_info": {
           "package_name": "com.blackbook.survey"
         }
       },
       "oauth_client": [
         {
-          "client_id": "572960857018-a25t4ushplpqijeppbqhe16jq3ege9qf.apps.googleusercontent.com",
-          "client_type": 3
-        },
-        {
-          "client_id": "572960857018-r3t32gtjvk2nuh3jgje62mlj4tehq7bl.apps.googleusercontent.com",
+          "client_id": "30757229116-otvdqvqhkn94san0ov8h9o9tvc1hk4n7.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.blackbook.survey",
-            "certificate_hash": "b0cb775403492ad7c5b05f700826e9876f223c64"
+            "certificate_hash": "3d183aeeb389fd2764bd2044282aefe786174659"
           }
+        },
+        {
+          "client_id": "30757229116-hrec80gnmdj9osq9n1hhnhh5325h9uto.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC2us1SwOCetU6N_1cP_GRKE_mWDIa8rnQ"
+          "current_key": "AIzaSyCaHostNnCXy--DI-fOgfYKIJrAKtEsLWI"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 1
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30757229116-hrec80gnmdj9osq9n1hhnhh5325h9uto.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "30757229116-ftitsek7m3rgmepssus0u2okrg1i7mja.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.harbordev.surveyapp",
+                "app_store_id": "1129233940"
+              }
+            }
+          ]
         }
       }
     }

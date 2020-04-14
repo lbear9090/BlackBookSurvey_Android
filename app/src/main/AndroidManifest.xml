@@ -22,7 +22,7 @@
         android:name=".Utils.MyCustomApplication" >
 
         <activity
-            android:name=".SplashscreenActivity"
+            android:name="com.blackbook.survey.SplashscreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
