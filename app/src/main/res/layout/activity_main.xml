@@ -10,11 +10,12 @@
 
     <ImageView
         android:id="@+id/img_logo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/blackbookimg"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/blackbookimg" />
 
     <TextView
         android:id="@+id/txt_message"

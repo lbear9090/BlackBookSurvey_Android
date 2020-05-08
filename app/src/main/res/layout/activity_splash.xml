@@ -32,8 +32,10 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/blackbookimg"
+        android:layout_alignStart="@+id/txt_title"
+        android:layout_alignEnd="@+id/txt_title"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/txt_title"/>
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/blackbookimg" />
 
 </RelativeLayout>
