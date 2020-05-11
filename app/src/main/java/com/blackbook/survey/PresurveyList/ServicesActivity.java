@@ -9,8 +9,11 @@ import com.blackbook.survey.BaseActivity;
 import com.blackbook.survey.R;
 import com.blackbook.survey.adapter.ExpandableListAdapter;
 import com.blackbook.survey.db.DatabaseHelper;
+import com.blackbook.survey.interfaces.ExpandableListner;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
@@ -19,7 +22,7 @@ import java.util.List;
  * Created by c119 on 29/03/16.
  *
  */
-public class ServicesActivity extends BaseActivity
+public class ServicesActivity extends BaseActivity implements ExpandableListner
 {
     private DatabaseHelper db;
     private ExpandableListView expListView;
@@ -69,6 +72,12 @@ public class ServicesActivity extends BaseActivity
             listDataChild.put(listDataHeader.get(i), dataList.get(i));
         }
 
+        Collections.sort(listDataHeader, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareToIgnoreCase(o2);
+            }
+        });
         ExpandableListAdapter listAdapter = new ExpandableListAdapter(ServicesActivity.this, listDataHeader, listDataChild);
 
         expListView.setAdapter(listAdapter);
@@ -84,5 +93,17 @@ public class ServicesActivity extends BaseActivity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onGroupClicked(int group_position, boolean isExpanded) {
+        if (expListView.isGroupExpanded(group_position))
+        {
+            expListView.collapseGroup(group_position);
+        }
+        else
+        {
+            expListView.expandGroup(group_position);
+        }
     }
 }

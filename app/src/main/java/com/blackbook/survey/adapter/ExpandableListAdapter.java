@@ -14,6 +14,7 @@ import com.blackbook.survey.Constant.AppConstant;
 import com.blackbook.survey.Constant.AppGlobal;
 import com.blackbook.survey.R;
 import com.blackbook.survey.db.DatabaseHelper;
+import com.blackbook.survey.interfaces.ExpandableListner;
 
 import java.util.HashMap;
 import java.util.List;
@@ -29,6 +30,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
     private List<String> _listDataHeader; // header titles
     private HashMap<String, List<String>> _listDataChild;
     private int selected_grp=-1, selected_child=-1;
+    private ExpandableListner expandlistner;
     private DatabaseHelper db;
 
     public ExpandableListAdapter(Context context, List<String> listDataHeader, HashMap<String, List<String>> listChildData)
@@ -36,6 +38,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
         this._context = context;
         this._listDataHeader = listDataHeader;
         this._listDataChild = listChildData;
+        this.expandlistner = (ExpandableListner) context;
 
         db = new DatabaseHelper(_context);
         db.openDataBase();
@@ -84,7 +87,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
     }
 
     @Override
-    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent)
+    public View getGroupView(int groupPosition, final boolean isExpanded, View convertView, ViewGroup parent)
     {
         String headerTitle = (String) getGroup(groupPosition);
         GroupViewHolder groupViewHolder;
@@ -99,6 +102,33 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
             groupViewHolder.mGroupText.setTypeface(BaseActivity.Sufi_Regular);
 
             convertView.setTag(groupViewHolder);
+
+            groupViewHolder.mGroupText.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    int pos = (int) v.getTag();
+
+                    if(getChildrenCount(pos)>0)
+                    {
+                        expandlistner.onGroupClicked(pos,isExpanded);
+                    }
+                    else
+                    {
+                        selected_grp = pos;
+                        String vv = (String) getGroup(selected_grp);
+                        AppGlobal.setStringPreference(_context, vv, AppConstant.Prefsurveytypetext);
+
+                        String parentid = db.Getsurveytypeparentid(vv);
+                        AppGlobal.setStringPreference(_context,parentid,AppConstant.PrefsurveytypeId);
+                        //AppGlobal.showToast(_context,parentid);
+
+                        notifyDataSetChanged();
+                        ((Activity) _context).finish();
+                    }
+                }
+            });
         }
         else
         {
@@ -106,7 +136,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
         }
 
         groupViewHolder.mGroupText.setText(headerTitle);
-
+        groupViewHolder.mGroupText.setTag(groupPosition);
         return convertView;
     }
 
