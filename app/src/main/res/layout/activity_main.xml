@@ -33,10 +33,12 @@
         android:id="@+id/img_login_with_fb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/fbloginimg"
-        android:layout_marginTop="45dp"
         android:layout_below="@+id/img_logo"
-        android:layout_alignStart="@+id/btn_continue_asguest"/>
+        android:layout_alignStart="@+id/btn_continue_asguest"
+        android:layout_alignEnd="@+id/btn_continue_asguest"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="0dp"
+        android:src="@drawable/fbloginimg" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/img_login_with_g"
@@ -56,6 +58,16 @@
         android:layout_marginTop="10dp"
         android:layout_alignEnd="@+id/btn_continue_asguest" />
 
+    <ImageView
+        android:id="@+id/img_login_with_li"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_login_with_tw"
+        android:layout_alignStart="@+id/btn_continue_asguest"
+        android:layout_alignEnd="@+id/btn_continue_asguest"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/linkedin" />
     <Button
         android:id="@+id/btn_continue_asguest"
         android:layout_width="wrap_content"
@@ -66,7 +78,7 @@
         android:textColor="@color/color_black"
         android:background="@drawable/guestbutton"
         android:layout_centerInParent="true"
-        android:layout_below="@+id/img_login_with_tw"
+        android:layout_below="@+id/img_login_with_li"
         android:gravity="center"/>
 
     <LinearLayout
