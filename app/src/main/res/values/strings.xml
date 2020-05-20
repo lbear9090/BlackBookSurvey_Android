@@ -80,6 +80,10 @@
     <string name="fb_login_protocol_scheme">fb225687495455053</string>
     <string name="str_no_internet">Internet connection is required!</string>
 
+    <string name = "linkedin_client_id">78i3tvz9gostz5</string>
+    <string name = "linkedin_client_secret">1DI6u1EhB2jUq3HJ</string>
+    <string name = "linkedin_redirect_url">http://blackbookmarketresearch.com/linkedin-oauth2/callback</string>
+
     <string name="Please_wait">Please wait&#8230;</string>
     <string name="Saving_profile">Saving Profile</string>
 

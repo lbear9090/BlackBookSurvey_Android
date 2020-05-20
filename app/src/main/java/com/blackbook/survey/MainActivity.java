@@ -2,13 +2,14 @@ package com.blackbook.survey;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 
 import com.blackbook.survey.Constant.AppConstant;
 import com.blackbook.survey.Constant.AppGlobal;
@@ -37,11 +38,8 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.gson.Gson;
 import com.twitter.sdk.android.core.Callback;
-import com.twitter.sdk.android.core.DefaultLogger;
 import com.twitter.sdk.android.core.Result;
 import com.twitter.sdk.android.core.Twitter;
-import com.twitter.sdk.android.core.TwitterAuthConfig;
-import com.twitter.sdk.android.core.TwitterConfig;
 import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterAuthClient;
@@ -53,6 +51,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener, WsResponseListener, GoogleApiClient.OnConnectionFailedListener
+        //, LinkedInManagerResponse
 {
     /*
      * Facebook Variables.
@@ -216,6 +215,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
             AppGlobal.showToast(MainActivity.this, getResources().getString(R.string.str_no_internet));
         }
 
+        ImageView btnloginwithli = (ImageView) findViewById(R.id.img_login_with_li);
+        btnloginwithli.setOnClickListener(this);
+
         Button btnprivacy = (Button) findViewById(R.id.btnPrivacyPolicy);
         btnprivacy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -377,7 +379,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 AppGlobal.setBooleanPreference(this, false, AppConstant.PREF_GUESTLOGIN);
                 LoginManager.getInstance().logInWithReadPermissions(MainActivity.this, arr_permisions);
                 break;
-
+            case R.id.img_login_with_li:
+                AppGlobal.setBooleanPreference(this, false, AppConstant.PREF_GUESTLOGIN);
+//                LinkedInRequestManager linkedInRequestManager = new LinkedInRequestManager(MainActivity.this, this, getResources().getString(R.string.linkedin_client_id), getResources().getString(R.string.linkedin_client_secret), getResources().getString(R.string.linkedin_redirect_url));
+//                linkedInRequestManager.showAuthenticateView(LinkedInRequestManager.MODE_BOTH_OPTIONS);
+                break;
             case R.id.btn_continue_asguest:
                 Log.i(Utils.TAG, "Guest registration");
                 AppGlobal.setBooleanPreference(this, true, AppConstant.PREF_GUESTLOGIN);
@@ -495,6 +501,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
+        Log.d("Survey LinedIn", "onConnectionFailed");
     }
+
 }

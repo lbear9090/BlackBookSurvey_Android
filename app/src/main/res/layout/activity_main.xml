@@ -58,7 +58,7 @@
         android:layout_marginTop="10dp"
         android:layout_alignEnd="@+id/btn_continue_asguest" />
 
-    <ImageView
+    <!--ImageView
         android:id="@+id/img_login_with_li"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,19 +67,19 @@
         android:layout_alignEnd="@+id/btn_continue_asguest"
         android:layout_marginTop="10dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/linkedin" />
+        android:src="@drawable/linkedin" /-->
     <Button
         android:id="@+id/btn_continue_asguest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/str_continue_asguest"
-        android:textSize="@dimen/app_textsize_regular"
-        android:textColor="@color/color_black"
-        android:background="@drawable/guestbutton"
+        android:layout_below="@id/img_login_with_tw"
         android:layout_centerInParent="true"
-        android:layout_below="@+id/img_login_with_li"
-        android:gravity="center"/>
+        android:layout_marginTop="10dp"
+        android:background="@drawable/guestbutton"
+        android:gravity="center"
+        android:text="@string/str_continue_asguest"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/app_textsize_regular" />
 
     <LinearLayout
         android:layout_width="match_parent"
