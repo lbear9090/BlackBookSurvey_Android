@@ -15,6 +15,7 @@ import com.blackbook.survey.Constant.AppGlobal;
 import com.blackbook.survey.R;
 import com.blackbook.survey.db.DatabaseHelper;
 import com.blackbook.survey.interfaces.ExpandableListner;
+import com.blackbook.survey.model.SurveyType;
 
 import java.util.HashMap;
 import java.util.List;
@@ -27,13 +28,13 @@ import java.util.List;
 public class ExpandableListAdapter extends BaseExpandableListAdapter
 {
     private Context _context;
-    private List<String> _listDataHeader; // header titles
+    private List<SurveyType> _listDataHeader; // header titles
     private HashMap<String, List<String>> _listDataChild;
     private int selected_grp=-1, selected_child=-1;
     private ExpandableListner expandlistner;
     private DatabaseHelper db;
 
-    public ExpandableListAdapter(Context context, List<String> listDataHeader, HashMap<String, List<String>> listChildData)
+    public ExpandableListAdapter(Context context, List<SurveyType> listDataHeader, HashMap<String, List<String>> listChildData)
     {
         this._context = context;
         this._listDataHeader = listDataHeader;
@@ -53,7 +54,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
     @Override
     public int getChildrenCount(int groupPosition)
     {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition)).size();
+        return this._listDataChild.get(this._listDataHeader.get(groupPosition).getSurvey_type_name()).size();
     }
 
     @Override
@@ -65,7 +66,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
     @Override
     public Object getChild(int groupPosition, int childPosition)
     {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition)).get(childPosition);
+        return this._listDataChild.get(this._listDataHeader.get(groupPosition).getSurvey_type_name()).get(childPosition);
     }
 
     @Override
@@ -89,7 +90,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
     @Override
     public View getGroupView(int groupPosition, final boolean isExpanded, View convertView, ViewGroup parent)
     {
-        String headerTitle = (String) getGroup(groupPosition);
+        String headerTitle = ((SurveyType) getGroup(groupPosition)).getSurvey_type_name();
         GroupViewHolder groupViewHolder;
 
         if (convertView == null)
@@ -100,8 +101,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
             groupViewHolder = new GroupViewHolder();
             groupViewHolder.mGroupText = (TextView) convertView.findViewById(R.id.lblListHeader);
             groupViewHolder.mGroupText.setTypeface(BaseActivity.Sufi_Regular);
-
-            convertView.setTag(groupViewHolder);
 
             groupViewHolder.mGroupText.setOnClickListener(new View.OnClickListener()
             {
@@ -117,7 +116,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
                     else
                     {
                         selected_grp = pos;
-                        String vv = (String) getGroup(selected_grp);
+                        String vv = ((SurveyType) getGroup(selected_grp)).getSurvey_type_name();
                         AppGlobal.setStringPreference(_context, vv, AppConstant.Prefsurveytypetext);
 
                         String parentid = db.Getsurveytypeparentid(vv);
@@ -129,6 +128,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
                     }
                 }
             });
+
+            convertView.setTag(groupViewHolder);
         }
         else
         {
@@ -170,7 +171,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
                     selected_grp = grp;
                     selected_child = childp;
 
-                    String vv = (String) getGroup(selected_grp);
+                    String vv = ((SurveyType) getGroup(selected_grp)).getSurvey_type_name();
                     String vv1 = (String) getChild(grp, childp);
                     AppGlobal.setStringPreference(_context, vv + "->" + vv1, AppConstant.Prefsurveytypetext);
 

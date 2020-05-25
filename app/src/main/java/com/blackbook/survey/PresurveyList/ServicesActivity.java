@@ -10,6 +10,7 @@ import com.blackbook.survey.R;
 import com.blackbook.survey.adapter.ExpandableListAdapter;
 import com.blackbook.survey.db.DatabaseHelper;
 import com.blackbook.survey.interfaces.ExpandableListner;
+import com.blackbook.survey.model.SurveyType;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -53,29 +54,29 @@ public class ServicesActivity extends BaseActivity implements ExpandableListner
 
     private void prepareListData()
     {
-        List<String> listDataHeader;
+        ArrayList<SurveyType> listDataHeader;
         HashMap<String, List<String>> listDataChild = new HashMap<>();
 
-        listDataHeader = db.GetaDataparentid("0");
+        listDataHeader = db.GetaAllSurviceType("0");
         int arrsize = listDataHeader.size();
 
         List<List<String>> dataList = new ArrayList<>();
 
-        for(int i = 1; i <= arrsize; i++)
+        for(int i = 0; i < arrsize; i++)
         {
-            List<String> tempList = db.GetaDataparentid(String.valueOf(i));
+            List<String> tempList = db.GetaDataparentid(listDataHeader.get(i).getId());
             dataList.add(tempList);
         }
 
         for(int i = 0 ; i < arrsize ; i++)
         {
-            listDataChild.put(listDataHeader.get(i), dataList.get(i));
+            listDataChild.put(listDataHeader.get(i).getSurvey_type_name(), dataList.get(i));
         }
 
-        Collections.sort(listDataHeader, new Comparator<String>() {
+        Collections.sort(listDataHeader, new Comparator<SurveyType>() {
             @Override
-            public int compare(String o1, String o2) {
-                return o1.compareToIgnoreCase(o2);
+            public int compare(SurveyType o1, SurveyType o2) {
+                return o1.getSurvey_type_name().compareToIgnoreCase(o2.getSurvey_type_name());
             }
         });
         ExpandableListAdapter listAdapter = new ExpandableListAdapter(ServicesActivity.this, listDataHeader, listDataChild);

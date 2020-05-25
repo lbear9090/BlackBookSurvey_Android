@@ -8,8 +8,8 @@ android {
         applicationId "com.blackbook.survey"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 13
-        versionName "2.10"
+        versionCode 14
+        versionName "2.11"
 
         // Enabling multidex support.
         multiDexEnabled true
@@ -48,7 +48,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.github.bmelnychuk:atv:1.2.0'
     implementation 'com.facebook.android:facebook-android-sdk:4.42.0'
-    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
     implementation 'com.twitter.sdk.android:twitter-core:3.1.1'
     implementation 'com.twitter.sdk.android:tweet-ui:3.1.1'
     implementation 'com.twitter.sdk.android:tweet-composer:3.1.1'
