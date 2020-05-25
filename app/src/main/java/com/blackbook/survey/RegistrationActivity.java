@@ -11,6 +11,12 @@ import android.widget.TextView;
 
 import com.blackbook.survey.Constant.AppConstant;
 import com.blackbook.survey.Constant.AppGlobal;
+import com.blackbook.survey.Constant.WsConstant;
+import com.blackbook.survey.asynktask.AsyncPostService;
+import com.blackbook.survey.interfaces.WsResponseListener;
+import com.blackbook.survey.model.Common;
+import com.blackbook.survey.model.ResponseObject;
+import com.blackbook.survey.model.ResponseResult;
 import com.blackbook.survey.model.User;
 import com.google.gson.Gson;
 
@@ -21,7 +27,7 @@ import java.util.ArrayList;
  * Created by c119 on 31/03/16.
  *
  */
-public class RegistrationActivity extends BaseActivity implements View.OnClickListener
+public class RegistrationActivity extends BaseActivity implements View.OnClickListener, WsResponseListener
 {
     public TextView txtresult, txtblackbook, txtparticipation, txtvarify, txtcontactby, txtemailby, txttelephoneby;
     public EditText edtname, edtemail, edtphone;
@@ -225,8 +231,35 @@ public class RegistrationActivity extends BaseActivity implements View.OnClickLi
                 }
 
                 if (validForm()) {
-                    Intent i = new Intent(RegistrationActivity.this, PresurveyActivity.class);
-                    startActivity(i);
+                    if(obj == null && AppGlobal.getBooleanPreference(this, AppConstant.PREF_GUESTLOGIN)){
+                        Common cm = new Common();
+                        cm.setUserID("");
+
+                        cm.setUsername(edtname.getText().toString().trim());
+                        cm.setEmailID(edtemail.getText().toString().trim());
+                        cm.setPhone(edtphone.getText().toString().trim());
+                        cm.setDeviceToken("");
+                        cm.setDeviceType("");
+                        if (AppGlobal.isNetwork(RegistrationActivity.this))
+                        {
+                            try
+                            {
+                                new AsyncPostService(RegistrationActivity.this,getResources().getString(R.string.Saving_profile), WsConstant.Req_Save_Profile,cm,true,true)
+                                        .execute(WsConstant.WS_SAVE_PROFILE);
+                            }
+                            catch (Exception e)
+                            {
+                                e.printStackTrace();
+                            }
+                        }
+                        else
+                        {
+                            AppGlobal.showToast(RegistrationActivity.this, getResources().getString(R.string.str_no_internet));
+                        }
+                    }else{
+                        Intent i = new Intent(RegistrationActivity.this, PresurveyActivity.class);
+                        startActivity(i);
+                    }
                 }
 
                 AppGlobal.setStringPreference(this, sendpref, AppConstant.Prefsendpref);
@@ -294,5 +327,47 @@ public class RegistrationActivity extends BaseActivity implements View.OnClickLi
         }*/
 
         return true;
+    }
+
+    @Override
+    public void onDelieverResponse(String serviceType, Object data, Exception error) {
+        if (error == null)
+        {
+            if (serviceType.equalsIgnoreCase(WsConstant.Req_Save_Profile))
+            {
+                ResponseObject resObj = ((ResponseResult) data).getResult();
+                if(resObj.getError_status().equalsIgnoreCase("NO"))
+                {
+                    User uobj = new User();
+                    uobj.setId(resObj.getArr_user().get(0).getId());
+                    uobj.setUsername(resObj.getArr_user().get(0).getUsername());
+                    uobj.setFacebook_id(resObj.getArr_user().get(0).getFacebook_id());
+                    uobj.setPassword(resObj.getArr_user().get(0).getPassword());
+                    uobj.setFirstname(resObj.getArr_user().get(0).getFirstname());
+                    uobj.setLastname(resObj.getArr_user().get(0).getLastname());
+                    uobj.setEmail_id(resObj.getArr_user().get(0).getEmail_id());
+                    uobj.setPhone_number(resObj.getArr_user().get(0).getPhone_number());
+                    uobj.setDevice_token(resObj.getArr_user().get(0).getDevice_token());
+                    uobj.setDevice_type(resObj.getArr_user().get(0).getDevice_type());
+                    uobj.setCreated_date(resObj.getArr_user().get(0).getCreated_date());
+                    uobj.setModified_date(resObj.getArr_user().get(0).getModified_date());
+                    uobj.setIs_deleted(resObj.getArr_user().get(0).getIs_deleted());
+
+                    if (!AppGlobal.getStringPreference(this,AppConstant.PREF_USER_OBJ).equals(""))
+                    {
+                        AppGlobal.removepref(this, AppConstant.PREF_USER_OBJ);
+                    }
+
+                    Gson gson = new Gson();
+                    String json = gson.toJson(uobj);
+                    AppGlobal.setStringPreference(this,json,AppConstant.PREF_USER_OBJ);
+
+                    AppGlobal.setBooleanPreference(this,true,AppConstant.PREF_USERLOGIN);
+
+                    Intent i = new Intent(RegistrationActivity.this, PresurveyActivity.class);
+                    startActivity(i);
+                }
+            }
+        }
     }
 }
