@@ -65,6 +65,12 @@ public class ServicesActivity extends BaseActivity implements ExpandableListner
         for(int i = 0; i < arrsize; i++)
         {
             List<String> tempList = db.GetaDataparentid(listDataHeader.get(i).getId());
+            Collections.sort(tempList, new Comparator<String>() {
+                @Override
+                public int compare(String o1, String o2) {
+                    return o1.compareToIgnoreCase(o2);
+                }
+            });
             dataList.add(tempList);
         }
 

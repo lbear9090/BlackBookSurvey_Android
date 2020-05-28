@@ -14,6 +14,8 @@ import com.blackbook.survey.Utils.IndexableListView;
 import com.blackbook.survey.adapter.VendorAdapter;
 import com.blackbook.survey.db.DatabaseHelper;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class VendorActivity extends BaseActivity
@@ -57,6 +59,12 @@ public class VendorActivity extends BaseActivity
     {
         List<String> countries;
         countries = db.GetAllVendors();
+        Collections.sort(countries, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareToIgnoreCase(o2);
+            }
+        });
         return countries;
     }
 
