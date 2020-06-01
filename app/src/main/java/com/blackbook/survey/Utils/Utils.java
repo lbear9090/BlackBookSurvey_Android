@@ -20,8 +20,8 @@ public class Utils {
     public void sendmail()
     {
         Intent email = new Intent(Intent.ACTION_SEND);
-        email.putExtra(Intent.EXTRA_EMAIL, new String[]{"info@brown-wilson.com"});
-        email.putExtra(Intent.EXTRA_SUBJECT, "2018 Black Book Survey ");
+        email.putExtra(Intent.EXTRA_EMAIL, new String[]{"research@blackbookmarketresearch.com"});
+        email.putExtra(Intent.EXTRA_SUBJECT, "2020-2021 Black Book Survey ");
         email.putExtra(Intent.EXTRA_TEXT,"");
 
         email.setType("message/rfc822");
