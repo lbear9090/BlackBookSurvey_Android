@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/yellowbutton"
             android:textSize="@dimen/app_textsize_regular"
-            android:text="@string/str_email"
+            android:text="@string/str_contactus"
             android:layout_below="@+id/btn_exit"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp" />

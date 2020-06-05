@@ -8,8 +8,8 @@ android {
         applicationId "com.blackbook.survey"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 16
-        versionName "2.13"
+        versionCode 17
+        versionName "2.14"
 
         // Enabling multidex support.
         multiDexEnabled true
