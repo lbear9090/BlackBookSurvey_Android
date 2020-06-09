@@ -252,50 +252,57 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
         // handle cancelled Twitter login (resets TwitterCore.*AuthHandler.AuthState)
         if(twitterAuthClient.getRequestCode() == requestCode) {
             //TODO:
-            username = data.getExtras().get("screen_name").toString();
-            t_id = data.getExtras().get("user_id").toString();
-
-            User uobj = new User();
-            uobj.setId("");
-            uobj.setUsername(username);
-            uobj.setTwitter_id(t_id);
-            uobj.setPassword("");
-            uobj.setFirstname("");
-            uobj.setLastname("");
-            uobj.setEmail_id(emailid);
-            uobj.setPhone_number("");
-            uobj.setDevice_token("");
-            uobj.setDevice_type(AppConstant.Const_Android);
-            uobj.setCreated_date("");
-            uobj.setModified_date("");
-            uobj.setIs_deleted("");
-
-            if (! AppGlobal.getStringPreference(this, AppConstant.PREF_USER_OBJ).equals(""))
+            try
             {
-                AppGlobal.removepref(this, AppConstant.PREF_USER_OBJ);
-            }
+                username = data.getExtras().get("screen_name").toString();
+                t_id = data.getExtras().get("user_id").toString();
 
-            Gson gson = new Gson();
-            String json = gson.toJson(uobj);
-            AppGlobal.setStringPreference(this,json,AppConstant.PREF_USER_OBJ);
+                User uobj = new User();
+                uobj.setId("");
+                uobj.setUsername(username);
+                uobj.setTwitter_id(t_id);
+                uobj.setPassword("");
+                uobj.setFirstname("");
+                uobj.setLastname("");
+                uobj.setEmail_id(emailid);
+                uobj.setPhone_number("");
+                uobj.setDevice_token("");
+                uobj.setDevice_type(AppConstant.Const_Android);
+                uobj.setCreated_date("");
+                uobj.setModified_date("");
+                uobj.setIs_deleted("");
 
-            Common cm = new Common();
-            cm.setTwitterID(t_id);
-
-            if (AppGlobal.isNetwork(MainActivity.this))
-            {
-                try
+                if (! AppGlobal.getStringPreference(this, AppConstant.PREF_USER_OBJ).equals(""))
                 {
-                    new AsyncPostService(MainActivity.this, getResources().getString(R.string.Please_wait), WsConstant.Req_Userby_Tid, cm, true, true).execute(WsConstant.WS_USERBY_FBID);
+                    AppGlobal.removepref(this, AppConstant.PREF_USER_OBJ);
                 }
-                catch (Exception e)
+
+                Gson gson = new Gson();
+                String json = gson.toJson(uobj);
+                AppGlobal.setStringPreference(this,json,AppConstant.PREF_USER_OBJ);
+
+                Common cm = new Common();
+                cm.setTwitterID(t_id);
+
+                if (AppGlobal.isNetwork(MainActivity.this))
                 {
-                    e.printStackTrace();
+                    try
+                    {
+                        new AsyncPostService(MainActivity.this, getResources().getString(R.string.Please_wait), WsConstant.Req_Userby_Tid, cm, true, true).execute(WsConstant.WS_USERBY_FBID);
+                    }
+                    catch (Exception e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+                else
+                {
+                    AppGlobal.showToast(MainActivity.this, getResources().getString(R.string.str_no_internet));
                 }
             }
-            else
+            catch (Exception e)
             {
-                AppGlobal.showToast(MainActivity.this, getResources().getString(R.string.str_no_internet));
+                e.printStackTrace();
             }
 
         } else if (requestCode == AppConstant.RC_SIGN_IN) {

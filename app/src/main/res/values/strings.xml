@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Black Book&#8482; Research</string>
     <string name="str_appname">Black Book&#8482; Research</string>
-    <string name="str_copyright">Copyright &#169; 2018 All rights reserved.</string>
+    <string name="str_copyright">Copyright &#169; 2020. All rights reserved.</string>
     <string name="str_welcome">Welcome, review your healthcare industry technology &amp; services vendor</string>
     <string name="str_key_performance">Key Performance Indicators</string>
     <string name="str_scroing_keys">Scoring Keys</string>
@@ -110,12 +110,12 @@
 
                                         <b>Survey Serving Technology</b>\n\n
 
-                                        This app uses various online survey platforms through which we conduct surveys including Pollfish and Survey Monkey for ad hoc polling.  By downloading this application, you give your consent fir the processing of your submitted data by third party ballot verifications as well. Black Book utilizes various.\n\n
+                                        This app uses various online survey platforms through which we conduct surveys including Pollfish and Survey Monkey for ad hoc polling.  By downloading this application, you give your consent for the processing of your submitted data by third party ballot verifications as well. Black Book utilizes various.\n\n
     </string>
 
     <string name="terms_service">Terms Of Use</string>
     <string name="terms_date">LAST MODIFIED NOVEMBER 7, 2017</string>
-    <string name="terms_description">Any use of this application, our website and/or other services that Black Book provides assumes that you agree to these Terms of Use. These terms also apply to all IOS and Android mobile applications that Black Book provides. If you do not accept these terms, you should cease all usage of our services. We reserve the right to change these Terms of Use in our sole direction at any time. You are advised to check back at this page for any updates.\n\n
+    <string name="terms_description">Any use of this application, our website and/or other services that Black Book provides assumes that you agree to these Terms of Use. These terms also apply to all iOS and Android mobile applications that Black Book provides. If you do not accept these terms, you should cease all usage of our services. We reserve the right to change these Terms of Use in our sole direction at any time. You are advised to check back at this page for any updates.\n\n
 
 A user is allowed to have only one account. An email address may only be used by one user. You agree to provide accurate information including email address, phone number, employer or company/organization where the software or services are implemented, position title, and location. Failure to do so may result in the termination of your account.\n\n
 
