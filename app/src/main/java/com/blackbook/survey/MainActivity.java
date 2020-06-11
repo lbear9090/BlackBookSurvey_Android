@@ -104,7 +104,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
 
         SignInButton signInButton = (SignInButton) findViewById(R.id.img_login_with_g);
         signInButton.setOnClickListener(this);
+        for (int i = 0; i < signInButton.getChildCount(); i++) {
+            View v = signInButton.getChildAt(i);
 
+            if (v instanceof TextView) {
+                TextView tv = (TextView) v;
+                tv.setText(R.string.login_google);
+                return;
+            }
+        }
 //        TwitterConfig config = new TwitterConfig.Builder(this)
 //                .logger(new DefaultLogger(Log.DEBUG))
 //                .twitterAuthConfig(new TwitterAuthConfig("CONSUMER_KEY", "CONSUMER_SECRET"))
@@ -288,7 +296,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 {
                     try
                     {
-                        new AsyncPostService(MainActivity.this, getResources().getString(R.string.Please_wait), WsConstant.Req_Userby_Tid, cm, true, true).execute(WsConstant.WS_USERBY_FBID);
+                        new AsyncPostService(   MainActivity.this, getResources().getString(R.string.Please_wait), WsConstant.Req_Userby_Tid, cm, true, true).execute(WsConstant.WS_USERBY_FBID);
                     }
                     catch (Exception e)
                     {

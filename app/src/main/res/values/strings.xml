@@ -2,7 +2,7 @@
     <string name="app_name">Black Book&#8482; Research</string>
     <string name="str_appname">Black Book&#8482; Research</string>
     <string name="str_copyright">Copyright &#169; 2020. All rights reserved.</string>
-    <string name="str_welcome">Welcome, review your healthcare industry technology &amp; services vendor</string>
+    <string name="str_welcome">Welcome, review your Healthcare industry technology &amp; Services vendor</string>
     <string name="str_key_performance">Key Performance Indicators</string>
     <string name="str_scroing_keys">Scoring Keys</string>
     <string name="str_vendors">Vendors</string>
@@ -128,5 +128,6 @@ You hereby acknowledge that Black Book and its founders and staff are not respon
     <string name="OrgID">OrgID</string>
     <string name="com.twitter.sdk.android.CONSUMER_KEY" tools:ignore="ExtraTranslation">p3synMX4pCPc2Bp7eTqs5wuWG</string>
     <string name="com.twitter.sdk.android.CONSUMER_SECRET" tools:ignore="ExtraTranslation">ifpaPJZFinCuxstx8GTsr43WH3kYkwxitz6VFbcKZg1NzOH6Qx</string>
+    <string name="login_google">Log in with Google</string>
 
 </resources>
