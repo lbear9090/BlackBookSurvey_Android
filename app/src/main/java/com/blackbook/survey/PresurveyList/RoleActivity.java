@@ -33,7 +33,7 @@ public class RoleActivity extends BaseActivity implements ExpandableListner
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_role);
-
+        setTitle("Roles");
         if (getActionBar() != null) {
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }

@@ -47,7 +47,7 @@ public class OrganizationActivity extends BaseActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_organization);
-
+        setTitle("Organizations");
         if (getActionBar() != null) {
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }

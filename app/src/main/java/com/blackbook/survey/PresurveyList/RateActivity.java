@@ -32,7 +32,7 @@ public class RateActivity extends BaseActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vendor);
-
+        setTitle("Rating");
         if (getActionBar() != null) {
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }

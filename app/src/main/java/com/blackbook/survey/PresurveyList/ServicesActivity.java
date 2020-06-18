@@ -33,7 +33,7 @@ public class ServicesActivity extends BaseActivity implements ExpandableListner
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service);
-
+        setTitle("Services");
         if (getActionBar() != null) {
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }

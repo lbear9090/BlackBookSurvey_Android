@@ -28,7 +28,7 @@ public class VendorActivity extends BaseActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vendor);
-
+        setTitle("Select Vendor");
         if (getActionBar() != null) {
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }
