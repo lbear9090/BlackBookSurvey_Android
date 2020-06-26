@@ -29,34 +29,56 @@
         android:layout_above="@+id/linearLayout2"
         android:layout_alignParentStart="true"/>
 
-    <ImageView
-        android:id="@+id/img_login_with_fb"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_message"
         android:layout_below="@+id/img_logo"
-        android:layout_alignStart="@+id/btn_continue_asguest"
-        android:layout_alignEnd="@+id/btn_continue_asguest"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="0dp"
-        android:src="@drawable/fbloginimg" />
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/img_login_with_g"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/img_login_with_fb"
-        android:layout_alignStart="@+id/btn_continue_asguest"
-        android:layout_marginTop="10dp"
-        android:layout_alignEnd="@+id/btn_continue_asguest"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <com.twitter.sdk.android.core.identity.TwitterLoginButton
-        android:id="@+id/img_login_with_tw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/img_login_with_g"
-        android:layout_alignStart="@+id/btn_continue_asguest"
-        android:layout_marginTop="10dp"
-        android:layout_alignEnd="@+id/btn_continue_asguest" />
+            <ImageView
+                android:id="@+id/img_login_with_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:src="@drawable/fbloginimg" />
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/img_login_with_g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <com.twitter.sdk.android.core.identity.TwitterLoginButton
+                android:id="@+id/img_login_with_tw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/btn_continue_asguest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/guestbutton"
+                android:gravity="center"
+                android:text="@string/str_continue_asguest"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/app_textsize_regular" />
+
+        </LinearLayout>
+    </LinearLayout>
 
     <!--ImageView
         android:id="@+id/img_login_with_li"
@@ -68,18 +90,6 @@
         android:layout_marginTop="10dp"
         android:adjustViewBounds="true"
         android:src="@drawable/linkedin" /-->
-    <Button
-        android:id="@+id/btn_continue_asguest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/img_login_with_tw"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/guestbutton"
-        android:gravity="center"
-        android:text="@string/str_continue_asguest"
-        android:textColor="@color/color_black"
-        android:textSize="@dimen/app_textsize_regular" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -108,4 +118,5 @@
             android:textColor="@android:color/black"
             android:layout_weight="1"/>
     </LinearLayout>
+
 </RelativeLayout>
