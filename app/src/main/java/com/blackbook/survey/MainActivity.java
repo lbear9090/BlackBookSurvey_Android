@@ -110,7 +110,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
             if (v instanceof TextView) {
                 TextView tv = (TextView) v;
                 tv.setText(R.string.login_google);
-                return;
+                break;
             }
         }
 //        TwitterConfig config = new TwitterConfig.Builder(this)
@@ -296,7 +296,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 {
                     try
                     {
-                        new AsyncPostService(   MainActivity.this, getResources().getString(R.string.Please_wait), WsConstant.Req_Userby_Tid, cm, true, true).execute(WsConstant.WS_USERBY_FBID);
+                        new AsyncPostService(MainActivity.this, getResources().getString(R.string.Please_wait), WsConstant.Req_Userby_Tid, cm, true, true).execute(WsConstant.WS_USERBY_FBID);
                     }
                     catch (Exception e)
                     {
