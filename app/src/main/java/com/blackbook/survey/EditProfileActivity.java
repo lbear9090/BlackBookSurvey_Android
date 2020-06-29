@@ -94,7 +94,12 @@ public class EditProfileActivity extends BaseActivity implements View.OnClickLis
             return false;
 
         }
+        
+        if (!AppGlobal.checkPhone(edtphone.getText().toString())) {
+            AppGlobal.showToast(this, getResources().getString(R.string.str_enter_validphone));
 
+            return false;
+        }
         return true;
     }
 

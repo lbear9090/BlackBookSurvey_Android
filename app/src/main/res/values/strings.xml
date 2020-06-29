@@ -66,6 +66,7 @@
     <string name="str_enter_name">Please enter your name</string>
     <string name="str_enter_email">Please enter your email</string>
     <string name="str_enter_validemail">Please enter a valid email</string>
+    <string name="str_enter_validphone">Please enter a valid phone number</string>
     <string name="str_check_notice">Please check you\'d like to receive notices.</string>
     <string name="str_check_incentives">Please check you\'d like to be eligible for incentives.</string>
     <string name="str_check_participation">Please check you\'d Like more information.</string>
