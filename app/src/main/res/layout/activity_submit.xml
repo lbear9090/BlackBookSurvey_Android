@@ -33,6 +33,16 @@
 
         </RelativeLayout>
 
+        <ImageView
+            android:id="@+id/imgtrue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rela_editext"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@null"
+            android:src="@drawable/truesample" />
+
         <Button
             android:id="@+id/btn_submit"
             android:layout_width="wrap_content"
@@ -40,16 +50,7 @@
             android:background="@drawable/yellowbutton"
             android:textSize="@dimen/app_textsize_regular"
             android:text="@string/str_submit"
-            android:layout_below="@+id/rela_editext"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/truesample"
-            android:contentDescription="@null"
-            android:layout_below="@+id/btn_submit"
+            android:layout_below="@+id/imgtrue"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp" />
 
